@@ -334,3 +334,45 @@ main {
 .submit-book-btn:hover {
   background: #374151;
 }
+
+.not-found-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.not-found-card h1 {
+  font-size: 72px;
+  margin: 0;
+  color: #f59e0b;
+}
+
+.not-found-card h2 {
+  margin: 10px 0;
+}
+
+.not-found-card p {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.home-btn {
+  display: inline-block;
+  background: #1f2937;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 9px;
+}
+
+.home-btn:hover {
+  background: #374151;
+}
