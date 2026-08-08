@@ -14,10 +14,10 @@ function AddBook() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-
+// This function do Handling form submission and adding a new book
   function handleSubmit(event) {
   event.preventDefault();
-
+// Check whether any required field is empty
 
   if (
     title.trim() === "" ||
@@ -47,7 +47,7 @@ function AddBook() {
     rating: Number(rating),
     image: image,
   };
-
+// Add the new book to Redux and redirect to Browse Books
   dispatch(addBook(newBook));
   navigate("/books");
 }

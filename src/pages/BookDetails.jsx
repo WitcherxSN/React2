@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 function BookDetails() {
 
   const books = useSelector((state) => state.books);
-
+// Getting the book ID from the dynamic URL
   const { id } = useParams();
-
+//Finding books with ID
   const selectedBook = books.find(
     (book) => book.id === Number(id)
   );

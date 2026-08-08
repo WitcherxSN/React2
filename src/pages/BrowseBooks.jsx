@@ -6,6 +6,7 @@ function BrowseBooks() {
     
     const [search, setSearch] = useState("");
     const { category } = useParams();
+    // Getting all books from the Redux store
     const books = useSelector((state) => state.books);
     
 
