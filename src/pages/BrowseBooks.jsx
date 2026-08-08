@@ -1,12 +1,12 @@
 import { Link, useParams } from "react-router-dom";
-import books from "../data/books";
+import { useSelector } from "react-redux";
 import { useState } from "react";
 
 function BrowseBooks() {
-
+    
     const [search, setSearch] = useState("");
     const { category } = useParams();
-
+    const books = useSelector((state) => state.books);
     
 
   const categoryBooks = category

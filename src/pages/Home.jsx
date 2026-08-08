@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import books from "../data/books";
+import { useSelector } from "react-redux";
 
 
 function Home() {
+
+    const books = useSelector((state) => state.books);
+    
   const categories = [
     "Fiction",
     "Non-Fiction",
