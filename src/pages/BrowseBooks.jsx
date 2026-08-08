@@ -1,19 +1,38 @@
 import { Link, useParams } from "react-router-dom";
 import books from "../data/books";
+import { useState } from "react";
 
 function BrowseBooks() {
+
+    const [search, setSearch] = useState("");
     const { category } = useParams();
 
-    const filteredBooks = category
+    
+
+  const categoryBooks = category
   ? books.filter(
       (book) =>
         book.category.toLowerCase() === category.toLowerCase()
     )
   : books;
 
+const filteredBooks = categoryBooks.filter((book) => {
+  return (
+    book.title.toLowerCase().includes(search.toLowerCase()) ||
+    book.author.toLowerCase().includes(search.toLowerCase())
+  );
+});
+
   return (
     <main>
       <h1>Browse Books</h1>
+
+      <input
+  type="text"
+  placeholder="Search by title or author..."
+  value={search}
+  onChange={(event) => setSearch(event.target.value)}
+/>
 
       <div>
         {filteredBooks.map((book) => (
