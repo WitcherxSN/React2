@@ -1,13 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import books from "../data/books";
 
 function BrowseBooks() {
+    const { category } = useParams();
+
+    const filteredBooks = category
+  ? books.filter(
+      (book) =>
+        book.category.toLowerCase() === category.toLowerCase()
+    )
+  : books;
+
   return (
     <main>
       <h1>Browse Books</h1>
 
       <div>
-        {books.map((book) => (
+        {filteredBooks.map((book) => (
           <div key={book.id}>
             <img
               src={book.image}
