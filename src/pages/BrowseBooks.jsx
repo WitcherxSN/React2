@@ -27,20 +27,20 @@ const filteredBooks = categoryBooks.filter((book) => {
     <main>
       <h1>Browse Books</h1>
 
-      <input
+      <input className="search-box"
   type="text"
   placeholder="Search by title or author..."
   value={search}
   onChange={(event) => setSearch(event.target.value)}
 />
 
-      <div>
+      <div className="book-grid">
         {filteredBooks.map((book) => (
-          <div key={book.id}>
+          <div className="book-card" key={book.id}>
             <img
               src={book.image}
               alt={book.title}
-              width="160"
+             
             />
 
             <h3>{book.title}</h3>
@@ -49,7 +49,8 @@ const filteredBooks = categoryBooks.filter((book) => {
 
             <p>{book.category}</p>
 
-            <Link to={`/book/${book.id}`}>
+            <Link  className="details-link" 
+            to={`/book/${book.id}`}>
                             View Details
                      </Link>
           </div>
