@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
+import books from "../data/books";
 
-import fictionImg from "../assets/books/fiction.jpg";
-import scifiImg from "../assets/books/scifi.jpg";
-import mysteryImg from "../assets/books/mystery.jpg";
 
 function Home() {
   const categories = [
@@ -12,29 +10,7 @@ function Home() {
     "Mystery"
   ];
 
-  const popularBooks = [
-    {
-      id: 1,
-      title: "The Silent Forest",
-      author: "Ava Morgan",
-      category: "Fiction",
-      image: fictionImg
-    },
-    {
-      id: 2,
-      title: "Beyond the Stars",
-      author: "Liam Carter",
-      category: "Sci-Fi",
-      image: scifiImg
-    },
-    {
-      id: 3,
-      title: "Hidden Truth",
-      author: "Noah Bennett",
-      category: "Mystery",
-      image: mysteryImg
-    }
-  ];
+  
 
   return (
     <main>
@@ -63,7 +39,7 @@ function Home() {
         <h2>Popular Books</h2>
 
         <div>
-          {popularBooks.map((book) => (
+          {books.map((book) => (
             <div key={book.id}>
 
               <img
