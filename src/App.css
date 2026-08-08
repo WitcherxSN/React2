@@ -160,3 +160,177 @@ main {
     font-size: 34px;
   }
 }
+
+.book-details {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+
+  display: flex;
+  gap: 50px;
+  align-items: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.details-image {
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.details-image img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.details-content {
+  flex: 1;
+}
+
+.details-category {
+  display: inline-block;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.details-content h1 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.details-content h3 {
+  color: #6b7280;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.details-description {
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.details-rating {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+.back-btn {
+  display: inline-block;
+  background: #1f2937;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9px;
+}
+
+.back-btn:hover {
+  background: #374151;
+}
+
+@media (max-width: 700px) {
+  .book-details {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .details-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .details-image img {
+    max-width: 280px;
+  }
+
+  .details-content h1 {
+    font-size: 30px;
+  }
+}
+.add-book-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.add-book-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add-book-header h1 {
+  margin-bottom: 8px;
+}
+
+.add-book-header p {
+  color: #6b7280;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #f59e0b;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.submit-book-btn {
+  border: none;
+  background: #1f2937;
+  color: white;
+  padding: 14px;
+  border-radius: 9px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-book-btn:hover {
+  background: #374151;
+}

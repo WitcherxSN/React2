@@ -17,25 +17,38 @@ function BookDetails() {
 
   return (
     <main>
-      <img
-        src={selectedBook.image}
-        alt={selectedBook.title}
-        width="220"
-      />
+     <div className="book-details">
 
-      <h1>{selectedBook.title}</h1>
+      <div className="details-image">
+        <img
+          src={selectedBook.image}
+          alt={selectedBook.title}
+        />
+      </div>
 
-      <p>Author: {selectedBook.author}</p>
+      <div className="details-content">
+        <span className="details-category">
+          {selectedBook.category}
+        </span>
 
-      <p>Category: {selectedBook.category}</p>
+        <h1>{selectedBook.title}</h1>
 
-      <p>{selectedBook.description}</p>
+        <h3>by {selectedBook.author}</h3>
 
-      <p>Rating: ⭐ {selectedBook.rating}</p>
+        <p className="details-description">
+          {selectedBook.description}
+        </p>
 
-      <Link to="/books">
-        Back to Browse
-      </Link>
+        <p className="details-rating">
+          ⭐ {selectedBook.rating} / 5
+        </p>
+
+        <Link className="back-btn" to="/books">
+          ← Back to Browse
+        </Link>
+      </div>
+
+    </div>
     </main>
   );
 }

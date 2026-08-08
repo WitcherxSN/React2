@@ -54,12 +54,17 @@ function AddBook() {
 
   return (
     <main>
-      <h1>Add a New Book</h1>
+      <div className="add-book-container">
 
-      <form onSubmit={handleSubmit}>
-        <div>
+      <div className="add-book-header">
+        <h1>Add a New Book</h1>
+        <p>Expand the library with a new title.</p>
+      </div>
+
+      <form className="add-book-form" onSubmit={handleSubmit}>
+
+        <div className="form-group">
           <label>Book Title</label>
-
           <input
             type="text"
             value={title}
@@ -68,9 +73,8 @@ function AddBook() {
           />
         </div>
 
-        <div>
+        <div className="form-group">
           <label>Author</label>
-
           <input
             type="text"
             value={author}
@@ -79,9 +83,8 @@ function AddBook() {
           />
         </div>
 
-        <div>
+        <div className="form-group">
           <label>Category</label>
-
           <select
             value={category}
             onChange={(event) => setCategory(event.target.value)}
@@ -94,9 +97,8 @@ function AddBook() {
           </select>
         </div>
 
-        <div>
+        <div className="form-group">
           <label>Description</label>
-
           <textarea
             value={description}
             onChange={(event) => setDescription(event.target.value)}
@@ -104,35 +106,37 @@ function AddBook() {
           />
         </div>
 
-        <div>
+        <div className="form-group">
           <label>Rating</label>
-
           <input
             type="number"
             value={rating}
             onChange={(event) => setRating(event.target.value)}
-            placeholder="Enter rating"
             min="1"
             max="5"
             step="0.1"
+            placeholder="Example: 4.5"
           />
         </div>
-        <div>
-  <label>Book Cover URL</label>
 
-  <input
-    type="text"
-    value={image}
-    onChange={(event) => setImage(event.target.value)}
-    placeholder="Enter book cover image URL"
-  />
-</div>
-       {error && <p>{error}</p>}
+        <div className="form-group">
+          <label>Book Cover URL</label>
+          <input
+            type="text"
+            value={image}
+            onChange={(event) => setImage(event.target.value)}
+            placeholder="Paste image URL"
+          />
+        </div>
 
-        <button type="submit">
+        {error && <p className="form-error">{error}</p>}
+
+        <button className="submit-book-btn" type="submit">
           Add Book
         </button>
+
       </form>
+    </div>
     </main>
   );
 }
